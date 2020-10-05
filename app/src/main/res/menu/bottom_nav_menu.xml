@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/memeFragment"
+        android:title="Home"
+        android:icon="@drawable/ic_align_right" />
+    <item
+        android:id="@+id/templateFragment"
+        android:title="Template"
+        android:icon="@drawable/ic_align_right" />
+
+
+    <item
+        android:title="Search"
+        android:id="@+id/exploreFragment"
+        android:icon="@drawable/ic_search" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:title="User"
+        android:icon="@drawable/ic_align_right" />
+
+    <item
+        android:title="Editor"
+        android:id="@+id/Editor"
+        android:icon="@drawable/ic_align_right" />
+</menu>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fonts">
+        <item>abeezee</item>
+        <item>akronim</item>
+
+
+        <item>aclonica</item>
+        <item>aguafina_script</item>
+
+        <item>annie_use_your_telescope</item>
+
+    </string-array>
+
+    <string-array name="userMenu">
+        <item>Change Username</item>
+        <item>Change Profile Picture</item>
+
+        <item>Change Password</item>
+        <item>Delete Account</item>
+
+    </string-array>
+
+    <string-array name="contentReportMenu">
+        <item>Inappropriate</item>
+        <item>Bullying</item>
+        <item>Threatening</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="userReportMenu">
+        <item>Posting Inappropriate Posts</item>
+        <item>Bullying</item>
+        <item>Threatening</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>

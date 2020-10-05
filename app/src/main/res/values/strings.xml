@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Netizen</string>
+    <string name="btn_select" translatable="false">Gallery</string>
+    <string name="text_btn" translatable="false">Text</string>
+    <string name="bmp_btn" translatable="false">Image</string>
+    <string name="save_btn" translatable="false">Save</string>
+    <string name="image_description" translatable="false">image</string>
+    <string name="txt_area" translatable="false">Text</string>
+    <string name="undo_btn" translatable="false">Undo</string>
+    <string name="redo_btn" translatable="false">Redo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_image_viewer">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+</resources>

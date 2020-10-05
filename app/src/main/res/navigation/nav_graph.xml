@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/memeFragment">
+
+    <fragment
+        android:id="@+id/memeFragment"
+        android:name="com.sudhar.netizen.MemeFragment"
+        android:label="fragment_meme"
+        tools:layout="@layout/fragment_meme" >
+
+        <action
+            android:id="@+id/action_memeFragment_to_viewerFragment"
+            app:destination="@id/viewerFragment" />
+        <action
+            android:id="@+id/action_memeFragment_to_exploreFragment"
+            app:destination="@id/exploreFragment" />
+        <action
+            android:id="@+id/action_memeFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_memeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_memeFragment_to_uploadFragment"
+            app:destination="@id/uploadFragment" />
+        <action
+            android:id="@+id/action_memeFragment_to_editPostFragment"
+            app:destination="@id/editPostFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/templateFragment"
+        android:name="com.sudhar.netizen.TemplateFragment"
+        android:label="fragment_template"
+        tools:layout="@layout/fragment_template">
+
+        <action
+            android:id="@+id/action_templateFragment_to_viewerFragment"
+            app:destination="@id/viewerFragment" />
+        <action
+            android:id="@+id/action_templateFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_templateFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.sudhar.netizen.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/action_profileFragment_to_viewerFragment"
+            app:destination="@id/viewerFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_userMenuFragment"
+            app:destination="@id/userMenuFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_authActivity"
+            app:destination="@id/authActivity"
+            app:enterAnim="@anim/fragment_fade_enter" />
+        <action
+            android:id="@+id/action_profileFragment_to_editPostFragment"
+            app:destination="@id/editPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewerFragment"
+        tools:layout="@layout/fragment_viewer"
+        android:name="com.sudhar.netizen.ViewerFragment"
+        android:label="TemplateViewer">
+        <action
+            android:id="@+id/action_viewerFragment_to_imageViewerActivity"
+            app:destination="@id/imageViewerActivity" />
+        <argument
+            android:name="Id"
+            app:argType="string" />
+        <argument
+            android:name="ContentType"
+            app:argType="com.sudhar.netizen.ContentType" />
+        <action
+            android:id="@+id/action_viewerFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_viewerFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_viewerFragment_to_editPostFragment"
+            app:destination="@id/editPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userMenuFragment"
+        android:name="com.sudhar.netizen.UserMenuFragment"
+        android:label="fragment_user_menu_list"
+        tools:layout="@layout/fragment_user_menu_list" >
+        <action
+            android:id="@+id/action_userMenuFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_userMenuFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/imageViewerActivity"
+        android:name="com.sudhar.netizen.ImageViewerActivity"
+        android:label="activity_image_viewer"
+        tools:layout="@layout/activity_image_viewer" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.sudhar.netizen.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" >
+        <action
+            android:id="@+id/action_changePasswordFragment_to_userMenuFragment"
+            app:destination="@id/userMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exploreFragment"
+        tools:layout="@layout/fragment_explore"
+        android:name="com.sudhar.netizen.ExploreFragment"
+        android:label="ExploreFragment" />
+    <activity
+        android:id="@+id/authActivity"
+        android:name="com.sudhar.netizen.AuthActivity"
+        android:label="activity_auth"
+        tools:layout="@layout/activity_auth" />
+    <fragment
+        android:id="@+id/userFragment"
+        tools:layout="@layout/fragment_user"
+        android:name="com.sudhar.netizen.UserFragment"
+        android:label="UserFragment">
+        <argument
+            android:name="Username"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_userFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadFragment"
+        android:name="com.sudhar.netizen.UploadFragment"
+        tools:layout="@layout/fragment_upload"
+        android:label="UploadFragment">
+        <argument
+            android:name="ImageUris"
+            app:argType="android.net.Uri[]" />
+        <argument
+            android:name="ContentType"
+            app:argType="com.sudhar.netizen.ContentType" />
+        <action
+            android:id="@+id/action_uploadFragment_to_viewerFragment"
+            app:destination="@id/viewerFragment"
+            app:popUpTo="@+id/memeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPostFragment"
+        tools:layout="@layout/fragment_upload"
+        android:name="com.sudhar.netizen.EditPostFragment"
+        android:label="EditPostFragment">
+        <action
+            android:id="@+id/action_editPostFragment_to_viewerFragment"
+            app:destination="@id/viewerFragment"
+            app:popUpTo="@+id/memeFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="ContentType"
+            app:argType="com.sudhar.netizen.ContentType" />
+    </fragment>
+</navigation>
